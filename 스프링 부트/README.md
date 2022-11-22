@@ -260,4 +260,47 @@ public class BoardController {
     - 이건 그런거 없이 걍 뜸.
     - 나중에 View쪽 가서 공부하면, 실제로 JSP이름을 던지고 넘겨주고 디스플레이도 됨(스포)
   - 이거들 다 RestController이 해주는 거임.
-    
+
+
+* JSP 모델 1구조
+```
+JSP 하나로 받을거 받고 보낼거 보내고 출력할거 다 출력해줬음.
+받기 위해 DAO 만들어서 호출하고 사용하고~~~
+```
+* JSP 모델 2 구조
+```
+Servlet이랑 JSP 분리,
+JSP가 리턴해주고,
+Servlet이 데이터 받고, DAO랑 상호작용 하고 
+```
+
+
+### 컴포넌트 스캔
+```
+<context:component-san base-package="com.rubypaper/">
+```
+- 얘를 통해 자동으로 스캔 해줌.
+
+
+### 스프링 어노테이션
+- @RestController
+```
+[컨트롤러 설정]
+JVM이 로드 시, 확인하고 설정 세팅을 해줌.
+```
+- @CRUD
+```
+GetMapping
+PostMapping
+PutMapping
+DeleteMapping
+```
+- @PathVariable
+
+- @RequestParam
+
+### 간단한 예제 (책에없음. 구경만 함)
+```
+1. 자바 프로젝트 생성
+
+```
