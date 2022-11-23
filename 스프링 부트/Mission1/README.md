@@ -4,8 +4,8 @@
 - 매핑 시 특정 값을 리턴하여 localhost:8080/Member에서 출력하게 만듦.
 
 ## 전체 코드
-* Controller (Package)
-- MemberController.java
+- Controller (Package)
+	- MemberController.java
 ```
 package com.rubypaper.controller;
 
@@ -92,8 +92,8 @@ public class MemberController {
 
 ```
 
-* Domain (Package)
-- MemberVO.java
+- Domain (Package)
+	- MemberVO.java
 ```
 package com.rubypaper.domain;
 
