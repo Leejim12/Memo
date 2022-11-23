@@ -8,13 +8,13 @@ H2 Database에 접속. Spring boot와 연동하여 CRUD 작업.
 
 1. MemberService에서 MemberController에서 컨트롤 하기 위한 메소드들 구현.
 * MemberService 객체 생성 시, 자동으로 MemberDAO 생성
-  -. MemberDAO("org.h2.Driver", "jdbc:h2:tcp://localhost/~/test", "sa", "")
-  -. MemberDAO는 ConnectH2를 상속받음 --> MemberDAO의 생성자 --> super(drv,url,id,pw)
-  -. ConnectH2는 Connect를 상속받음. ---> super(driver,url,id,pwd)
-  -. Connect(driver,url,id,pwd)
-    --> getConnection이 true를 반환하면, 연결 성공 보여줌.
-    --> false일 경우, 연결 실패 보여줌
-  -. getConnection(driver,url,id,pwd)
+  - MemberDAO("org.h2.Driver", "jdbc:h2:tcp://localhost/~/test", "sa", "")
+  - MemberDAO는 ConnectH2를 상속받음 --> MemberDAO의 생성자 --> super(drv,url,id,pw)
+  - ConnectH2는 Connect를 상속받음. ---> super(driver,url,id,pwd)
+  - Connect(driver,url,id,pwd)
+    - getConnection이 true를 반환하면, 연결 성공 보여줌.
+    - false일 경우, 연결 실패 보여줌
+  - getConnection(driver,url,id,pwd)
   ```
       boolean getConnection(String driver, String url, String id, String pwd) {
         System.out.println("[driver]" + driver);
