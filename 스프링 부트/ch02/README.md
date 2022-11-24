@@ -1,4 +1,4 @@
-# DI/IOC
+# DI/IOC 및 Annotation 기본
 ## 개념
 - 상황 : 클래스 2개 ( class A, class SubA) 
   -  a = new SubA();
@@ -81,3 +81,37 @@ classA{
 ```
 유지보수를 위해서 Annotation 구별해주는 것이 편함. (클래스의 정체성 부여.)
 ```
+- 부트는, @ComponentScan이라는 어노테이션이 자동으로 들어가 있음.
+```
+@ComponentScan
+컴포넌터들을 다 스캔한다.
+ex. pom.pnu -> org.pnu : 얘는 스캔 못함.
+-> 이런경우, 따로 @ComponentScan 따로 명시 해 줘야함.
+```
+
+- @Autowired
+```
+IOC 컨테이너에 객체 만들어서 집어넣는다.
+-> 안에 들어있는 애들을 자동으로 연결.
+-> 근데, 생성자 하나면 자동으로 붙음
+
+리포지터리 2개면 에러를 띄움.
+* 테스트 하느라 주석 띄우고 풀고 하는거지, 실제로는 가능.
+
+AutoWired 방식.
+1. 생성자 2. 필드 3. 세터에 집어넣기.
+```
+3)
+public setMemberInterface(MemberInterface memberDao){
+  this.memberDao = memberDao;
+}
+
+
+생성자나 세터에 집어넣는게 더 안전하다.
+```
+
+[토비의 스프링 프레임워크]
+
+
+
+
